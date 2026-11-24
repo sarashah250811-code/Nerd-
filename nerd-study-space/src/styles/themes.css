@@ -1,0 +1,122 @@
+/*
+ * Theme tokens. Every colour in the app comes from these variables, so a theme
+ * is just a set of values. scripts/check-contrast.ts parses this file and fails
+ * the test run if any text/background pair drops below WCAG AA (4.5:1).
+ */
+:root,
+[data-theme='warm'] {
+  --bg: #f3ead7;
+  --surface: #fbf6ea;
+  --surface-2: #eadfc6;
+  --border: #d6c6a3;
+  --text: #3a2e22;
+  --muted: #6b5842;
+  --accent: #8a4f1d;
+  --on-accent: #fff9ee;
+  --accent-soft: #ecd9b6;
+  --danger: #a3321f;
+  --success: #2f6b3a;
+  --sidebar: #ece0c5;
+  --shadow: 0 1px 2px rgba(58, 46, 34, 0.06), 0 6px 18px rgba(58, 46, 34, 0.07);
+  --deco: radial-gradient(1200px 500px at 85% -10%, rgba(138, 79, 29, 0.08), transparent 60%),
+    radial-gradient(900px 400px at -10% 110%, rgba(138, 79, 29, 0.06), transparent 60%);
+}
+
+[data-theme='light'] {
+  --bg: #eef2f8;
+  --surface: #ffffff;
+  --surface-2: #e3e9f3;
+  --border: #cfd8e6;
+  --text: #17233b;
+  --muted: #4b5a76;
+  --accent: #2457c5;
+  --on-accent: #ffffff;
+  --accent-soft: #dbe6fb;
+  --danger: #b3261e;
+  --success: #1f6f43;
+  --sidebar: #f7f9fc;
+  --shadow: 0 1px 2px rgba(23, 35, 59, 0.05), 0 6px 18px rgba(23, 35, 59, 0.06);
+  --deco: none;
+}
+
+[data-theme='midnight'] {
+  --bg: #0b1430;
+  --surface: #121e42;
+  --surface-2: #1a2958;
+  --border: #2c3d73;
+  --text: #e8ecff;
+  --muted: #a9b4dc;
+  --accent: #a3b0ff;
+  --on-accent: #0b1430;
+  --accent-soft: #26357a;
+  --danger: #ff9a8f;
+  --success: #8fe0b0;
+  --sidebar: #0e1838;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.28);
+  /* a sparse field of faint stars */
+  --deco: radial-gradient(1.5px 1.5px at 12% 18%, rgba(232, 236, 255, 0.55), transparent 60%),
+    radial-gradient(1px 1px at 28% 62%, rgba(232, 236, 255, 0.45), transparent 60%),
+    radial-gradient(1.5px 1.5px at 47% 12%, rgba(232, 236, 255, 0.5), transparent 60%),
+    radial-gradient(1px 1px at 63% 74%, rgba(232, 236, 255, 0.4), transparent 60%),
+    radial-gradient(1.5px 1.5px at 78% 28%, rgba(232, 236, 255, 0.55), transparent 60%),
+    radial-gradient(1px 1px at 90% 82%, rgba(232, 236, 255, 0.4), transparent 60%),
+    radial-gradient(1px 1px at 8% 88%, rgba(232, 236, 255, 0.4), transparent 60%),
+    radial-gradient(900px 500px at 80% -10%, rgba(163, 176, 255, 0.1), transparent 60%);
+}
+
+[data-theme='star'] {
+  --bg: #161230;
+  --surface: #1f1a42;
+  --surface-2: #2a2358;
+  --border: #403878;
+  --text: #eeeaff;
+  --muted: #b9b2df;
+  --accent: #c0a6ff;
+  --on-accent: #161230;
+  --accent-soft: #382f72;
+  --danger: #ff9fa0;
+  --success: #98e0b4;
+  --sidebar: #1a1538;
+  --ornament: #d9b86c;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.3);
+  /* constellations: dots joined by hairlines */
+  --deco: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='420' viewBox='0 0 520 420' fill='none' stroke='%23c0a6ff' stroke-opacity='.22' stroke-width='1'%3E%3Cpath d='M40 60 L110 100 L170 70 L240 120 L300 90'/%3E%3Cpath d='M360 40 L420 80 L470 50 L490 120'/%3E%3Cpath d='M60 300 L120 340 L190 310 L250 360 L330 330'/%3E%3Cpath d='M380 250 L440 290 L480 260'/%3E%3Cg fill='%23d9b86c' stroke='none' fill-opacity='.55'%3E%3Ccircle cx='40' cy='60' r='2'/%3E%3Ccircle cx='110' cy='100' r='2.5'/%3E%3Ccircle cx='170' cy='70' r='2'/%3E%3Ccircle cx='240' cy='120' r='2.5'/%3E%3Ccircle cx='300' cy='90' r='2'/%3E%3Ccircle cx='360' cy='40' r='2'/%3E%3Ccircle cx='420' cy='80' r='2.5'/%3E%3Ccircle cx='470' cy='50' r='2'/%3E%3Ccircle cx='490' cy='120' r='2'/%3E%3Ccircle cx='60' cy='300' r='2'/%3E%3Ccircle cx='120' cy='340' r='2.5'/%3E%3Ccircle cx='190' cy='310' r='2'/%3E%3Ccircle cx='250' cy='360' r='2.5'/%3E%3Ccircle cx='330' cy='330' r='2'/%3E%3Ccircle cx='380' cy='250' r='2'/%3E%3Ccircle cx='440' cy='290' r='2.5'/%3E%3Ccircle cx='480' cy='260' r='2'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+[data-theme='dark'] {
+  --bg: #0d0d0f;
+  --surface: #161618;
+  --surface-2: #212124;
+  --border: #323236;
+  --text: #ececee;
+  --muted: #a2a2aa;
+  --accent: #d4d4dc;
+  --on-accent: #0d0d0f;
+  --accent-soft: #2c2c31;
+  --danger: #ff8f87;
+  --success: #86d9a3;
+  --sidebar: #111113;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --deco: none;
+}
+
+[data-theme='starry-evening'] {
+  --bg: #f5ebbf;
+  --surface: #fbf4d4;
+  --surface-2: #ecdf9f;
+  --border: #cdbd78;
+  --text: #1d2b50;
+  --muted: #46567c;
+  --accent: #2b559e;
+  --on-accent: #fffbe8;
+  --accent-soft: #cfd9ee;
+  --danger: #a52f22;
+  --success: #2b6b3c;
+  --sidebar: #efe3ab;
+  --shadow: 0 1px 2px rgba(29, 43, 80, 0.07), 0 6px 18px rgba(29, 43, 80, 0.08);
+  /* soft, painterly evening wash: swirling blue and warm yellow ellipses */
+  --deco: radial-gradient(520px 260px at 82% 6%, rgba(43, 85, 158, 0.16), transparent 70%),
+    radial-gradient(360px 180px at 70% 14%, rgba(224, 177, 60, 0.22), transparent 70%),
+    radial-gradient(640px 300px at 12% 96%, rgba(43, 85, 158, 0.13), transparent 70%),
+    radial-gradient(300px 140px at 24% 88%, rgba(224, 177, 60, 0.18), transparent 70%);
+}
